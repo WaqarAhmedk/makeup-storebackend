@@ -3,7 +3,7 @@ const multer = require("multer");
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
 
-        cb(null, "/home/anonymous-kashmiri/internship/makeupstore/src/images");
+        cb(null, "https://makeupstore.vercel.app/images");
     },
     filename: (req, file, cb) => {
      
