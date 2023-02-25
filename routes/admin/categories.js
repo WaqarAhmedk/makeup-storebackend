@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const { body, validationResult } = require("express-validator");
-const multer = require('multer');
 const getAdmin = require('../../middlewares/getadmin');
 const upload = require('../../middlewares/multer/imagemiddleware');
 const categorymodel = require('../../models/categorymodel');
@@ -15,7 +14,6 @@ router.post("/create-category",
     body("name").notEmpty().withMessage("Category Name should be procided"),
     getAdmin,
     async (req, res) => {
-
 
 
         const errors = validationResult(req);
